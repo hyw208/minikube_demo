@@ -27,7 +27,7 @@ spec:
       volumes:
         - name: demosource
           hostPath:
-            path: /Users/hyw2082/Documents/Code/python/minikube_demo/demoapp
+            path: /Users/hyw208/Documents/Code/python/minikube_demo/demoapp
 status: {}
 ---
 apiVersion: v1
