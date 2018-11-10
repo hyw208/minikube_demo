@@ -40,5 +40,7 @@ demo python flask debug in minikube
     '/demoapp/demo.py' is the pod's source code; 
     './demo.py' just copy and put in current directory; 
 
+    or just use docker cp, where '155286a1a608' is the container id
+    >docker cp 155286a1a608:/demoapp ./demoapp
 
 
