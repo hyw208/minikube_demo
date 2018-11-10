@@ -36,9 +36,9 @@ demo python flask debug in minikube
 10. you can use kubectl to copy files/directories btw your host and remote pod, e.g. copy code in the pod to host's /tmp
     >kubectl cp demoapp-57fb996db7-vz9km:/demoapp/demo.py ./demo.py
     
-    'demoapp-57fb996db7-vz9km' is the pod, you can use kubectl get pods to find
-    '/demoapp/demo.py' is the pod's source code
-    './demo.py' just copy and put in current directory
+    'demoapp-57fb996db7-vz9km' is the pod, you can use kubectl get pods to find; 
+    '/demoapp/demo.py' is the pod's source code; 
+    './demo.py' just copy and put in current directory; 
 
 
 
