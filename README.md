@@ -12,7 +12,7 @@ demo python flask debug in minikube
 2. build docker image
     >cd minikube_demo && docker build -t demoapp:demo .
 
-3. change the path in demoapp-deployment.yaml, replace path "/Users/hyw208/Documents/Code/python/minikube_demo/demoapp" to match yours
+3. change the path in demoapp-deployment.yaml, replace path "/Users/hyw208/Documents/Code/python/minikube_demo/demoapp" to match yours. Note, you have to have source code e.g. demo.py in the path you specified, otherwise the container will exit
 
 4. add exe permission
     >chmod +x restart.sh
@@ -32,4 +32,13 @@ demo python flask debug in minikube
     >nc $(minikube ip) 30547
 
 9. you can change the code in demo.py under your path e.g. /Users/hyw208/Documents/Code/python/minikube_demo/demoapp/demo.py and changes should reflect asap
+
+10. you can use kubectl to copy files/directories btw your host and remote pod, e.g. copy code in the pod to host's /tmp
+    >kubectl cp demoapp-57fb996db7-vz9km:/demoapp/demo.py ./demo.py
+    
+    'demoapp-57fb996db7-vz9km' is the pod, you can use kubectl get pods to find
+    '/demoapp/demo.py' is the pod's source code
+    './demo.py' just copy and put in current directory
+
+
 
