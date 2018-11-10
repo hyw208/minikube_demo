@@ -33,7 +33,7 @@ demo python flask debug in minikube
 
 9. you can change the code in demo.py under your path e.g. /Users/hyw208/Documents/Code/python/minikube_demo/demoapp/demo.py and changes should reflect asap
 
-10. you can use kubectl to copy files/directories btw your host and remote pod, e.g. copy code in the pod to host's /tmp
+10. you can use kubectl to copy files/directories btw your host and remote pod, 
     >kubectl cp demoapp-57fb996db7-vz9km:/demoapp/demo.py ./demo.py
     
     'demoapp-57fb996db7-vz9km' is the pod, you can use kubectl get pods to find; 
