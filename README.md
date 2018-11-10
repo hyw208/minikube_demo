@@ -1,6 +1,11 @@
 # minikube_demo
 demo python flask debug in minikube
 
+0. assume you have docker and minikube installed started correctly  
+    >eval $(minikube docker-env)
+
+    use minikube internal docker daemon to build/use images locally
+    
 1. check out: 
     >git clone https://github.com/hyw208/minikube_demo.git
     
