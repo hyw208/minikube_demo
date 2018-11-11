@@ -80,4 +80,19 @@
 
 1. keep the docker image you previously built, demoapp-deployment.yaml, and the restart.sh and delete the rest
 
-2. modify demoapp-deployment.yaml, deleting line 
+2. delete/comment out line 24~30 in demoapp-deployment.yaml, removing the volume mapping portion
+
+3. re-deploy 
+    >restart.sh
+
+4. get acutal ports, 30325 to access flask, 30547 for debug with rpdb
+    >kubectl get service demoapp
+    
+    e.g. 5000:30325/TCP,5678:30547/TCP
+
+5. open debug perspective in eclipse, and start PyDev server (it waits for remote pydevd to connect to back to IDE)
+
+6. invoke flask app, it will cause pydevd to connect to eclipse via the pre-configured ip & port, e.g. 192.168.1.156 & 5678
+    >curl $(minikube ip):30325
+
+7. your PyDev server in eclipse will ask you to select the path to demo.py and you can only ignore since you have no source code locally but should still be able to debug
