@@ -51,7 +51,7 @@
 	
     >pydevd.settrace("192.168.1.156", port=5678) #rpdb.set_trace('0.0.0.0')
     
-2. change requirements.txt, replace rpdb with pydevd
+2. change requirements.txt, replace **rpdb** with **pydevd**
 
 3. build docker image again
     >docker build -t demoapp:demo .
