@@ -70,7 +70,7 @@
 
 6. open debug perspective in eclipse, and start PyDev server (it waits for remote pydevd to connect to back to IDE)
 
-7. invoke flask app, 
+7. invoke flask app, it will cause pydevd to connect to eclipse via the pre-configured ip & port, e.g. 192.168.1.156 & 5678
     >curl $(minikube ip):30325
     
-8. your PyDev server should now ask you to select the path to demo.py and start debugging
+8. your PyDev server in eclipse will ask you to select the path to demo.py and start debugging
