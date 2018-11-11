@@ -43,4 +43,7 @@ demo python flask debug in minikube
     or just use docker cp, where '155286a1a608' is the container id you can get with 'docker ps' cmd
     >docker cp 155286a1a608:/demoapp ./demoapp
 
-11. for IDE debug, you can use pydev
+11. for IDE debug, you can use eclipse with pydev, 
+    >import pydevd
+	
+    >pydevd.settrace("192.168.1.156", port=5678)
