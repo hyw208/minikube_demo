@@ -75,3 +75,9 @@
     
 8. your PyDev server in eclipse will ask you to select the path to demo.py, you can ignore or provide your local copy and start debugging. If you ignore, you will be stepping with temp files downloaded from container
 
+
+# say you are given the image and don't have source code locally
+
+1. keep the docker image you previously built, demoapp-deployment.yaml, and the restart.sh and delete the rest
+
+2. modify demoapp-deployment.yaml, deleting line 
