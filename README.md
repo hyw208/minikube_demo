@@ -8,11 +8,11 @@ demo python flask debug in minikube
     
 1. check out: 
     >git clone https://github.com/hyw208/minikube_demo.git
-    
-2. build docker image
-    >cd minikube_demo && docker build -t demoapp:demo .
 
-3. change the path in demoapp-deployment.yaml, replace path "/Users/hyw208/Documents/Code/python/minikube_demo/demoapp" to match yours. Note, you have to have source code e.g. demo.py in the path you specified, otherwise the container will exit
+2. change the path in demoapp-deployment.yaml, replace path "/Users/hyw208/Documents/Code/python/minikube_demo/demoapp" to match yours. Note, you have to have source code e.g. demo.py in the path you specified, otherwise the container will exit
+    
+3. build docker image
+    >cd minikube_demo && docker build -t demoapp:demo .
 
 4. add exe permission
     >chmod +x restart.sh
@@ -43,4 +43,4 @@ demo python flask debug in minikube
     or just use docker cp, where '155286a1a608' is the container id you can get with 'docker ps' cmd
     >docker cp 155286a1a608:/demoapp ./demoapp
 
-
+11. for IDE debug, you can use pydev
