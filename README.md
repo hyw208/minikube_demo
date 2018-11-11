@@ -21,7 +21,7 @@
 5. deploy
     >./restart.sh
     
-6. get acutal ports, 30325 to access flask, 4444 for debug with rpdb
+6. get acutal ports, 30325 to access flask, 30547 for debug with rpdb
     >kubectl get service demoapp
     
     e.g. 5000:30325/TCP,4444:30547/TCP
@@ -46,6 +46,8 @@
 
 # demo debug python flask with eclipse + pydev in minikube
 
+0. assume you have eclipse + pydev plugin and pip installed pydevd on host computer
+
 1. for IDE debug, you can use eclipse with pydev instead of rpdb, change the code in demo.py to the following:
     >import pydevd #import rpdb  
 	
@@ -58,4 +60,17 @@
 3. build docker image again
     >docker build -t demoapp:demo .
 
-4. 
+4. deploy
+    >./restart.sh
+
+5. get acutal ports, 30325 to access flask, 30547 for debug with rpdb
+    >kubectl get service demoapp
+    
+    e.g. 5000:30325/TCP,5678:30547/TCP
+
+6. open debug perspective in eclipse, and start PyDev server (it waits for remote pydevd to connect to back to IDE)
+
+7. invoke flask app, 
+    >curl $(minikube ip):30325
+    
+8. your PyDev server should now ask you to select the path to demo.py and start debugging
