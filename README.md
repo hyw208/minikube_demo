@@ -26,7 +26,7 @@
     
     e.g. 5000:30325/TCP,4444:30547/TCP
 
-7. test flask app, IT WILL BLOCK WAITING FOR DEBUGGER
+7. test flask app, **IT WILL BLOCK WAITING FOR DEBUGGER**
     >curl $(minikube ip):30325
     
 8. bring up another console and use pdb to debug
