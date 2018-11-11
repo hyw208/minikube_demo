@@ -46,7 +46,7 @@
 
 # demo debug python flask with eclipse + pydev in minikube
 
-0. assume you have eclipse + pydev plugin and pip installed pydevd on host computer
+0. assume you have eclipse + pydev plugin and pip installed pydevd on host computer. if docker container is built with conda, you can export env into a requirements.txt or environment.yaml and create same conda env and configure pydev interpreter as prep step.
 
 1. for IDE debug, you can use eclipse with pydev instead of rpdb, change the code in demo.py to the following:
     >import pydevd #import rpdb  
