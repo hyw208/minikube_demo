@@ -1,5 +1,6 @@
 # minikube_demo
-demo debug python flask with rpdb in minikube
+
+# demo debug python flask with rpdb in minikube
 
 0. assume you have docker and minikube installed started correctly  
     >eval $(minikube docker-env)
@@ -43,7 +44,7 @@ demo debug python flask with rpdb in minikube
     or just use docker cp, where '155286a1a608' is the container id you can get with 'docker ps' cmd
     >docker cp 155286a1a608:/demoapp ./demoapp
 
-demo debug python flask with eclipse + pydev in minikube
+# demo debug python flask with eclipse + pydev in minikube
 
 1. for IDE debug, you can use eclipse with pydev instead of rpdb, change the code in demo.py to the following:
     >import pydevd #import rpdb  
